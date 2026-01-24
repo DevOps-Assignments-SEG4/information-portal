@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Contact the Department of Computer Science at University of Excellence.">
+  <meta name="description" content="Contact the Department of Computer Science at University of Excellence.">
   <title>Contact | Department of Computer Science</title>
 
   <link rel="stylesheet" href="../styles/contact.css" />
@@ -19,7 +18,7 @@
 
 <body>
 
-  <!-- Header -->
+  <!-- Header / Navigation -->
   <header class="header">
     <div class="container header-container">
       <div class="logo">
@@ -31,11 +30,11 @@
 
       <nav class="main-nav">
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#faculty">Faculty</a></li>
-          <li><a href="#admission">Admissions</a></li>
-          <li><a href="contact.html" >Contact</a></li>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./courses.html">Courses</a></li>
+          <li><a href="./faculty.html">Faculty</a></li>
+          <li><a href="./admissions.html">Admissions</a></li>
+          <li><a href="./contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -59,65 +58,76 @@
       </div>
     </section>
 
-    <!-- SAME SECTION STRUCTURE AS HOME -->
+    <!-- Contact Content Section -->
     <section class="section">
       <div class="container">
 
         <div class="section-header">
-          <h2>Contact Information</h2>
+          <h2>Get In Touch</h2>
           <div class="section-divider"></div>
         </div>
 
-        <!-- SAME GRID AS ABOUT -->
         <div class="about-grid">
-
-          <!-- LEFT SIDE (TEXT) -->
-          <div class="about-text">
+          <!-- LEFT SIDE: Contact info -->
+          <div class="contact-info">
             <p class="mission-statement">
               The Department of Computer Science is committed to supporting
-              students, parents, and visitors by providing timely and
-              accurate information.
+              students, parents, and visitors. Use the form or our direct
+              contacts to reach out.
             </p>
 
-            <ul class="highlight-list">
-              <li><strong>Email:</strong> info.cs@university.edu.pk</li>
-              <li><strong>Phone:</strong> +92 42 111 000 111</li>
-              <li><strong>Location:</strong> Block B, 2nd Floor, UCP Lahore</li>
-              <li><strong>Office Hours:</strong> Monday – Friday (9:00 AM – 5:00 PM)</li>
-            </ul>
+            <div class="about-stats" style="grid-template-columns: 1fr; gap: 1.5rem;">
+              <div class="stat-card">
+                <span class="stat-number">📍</span>
+                <span class="stat-label">Campus Location</span>
+                <p>Block B, 2nd Floor, UCP Lahore</p>
+              </div>
+
+              <div class="stat-card">
+                <span class="stat-number">📞</span>
+                <span class="stat-label">Phone Support</span>
+                <p>+92 42 111 000 111</p>
+              </div>
+
+              <div class="stat-card">
+                <span class="stat-number">✉️</span>
+                <span class="stat-label">Email</span>
+                <p>info.cs@university.edu.pk</p>
+              </div>
+
+              <div class="stat-card">
+                <span class="stat-number">⏰</span>
+                <span class="stat-label">Office Hours</span>
+                <p>Mon – Fri: 9:00 AM – 5:00 PM</p>
+              </div>
+            </div>
           </div>
 
-          <!-- RIGHT SIDE (CARDS LIKE HOME STATS) -->
-          <div class="about-stats">
-
+          <!-- RIGHT SIDE: Contact Form -->
+          <div class="contact-form-container">
             <div class="stat-card">
-              <span class="stat-number">📍</span>
-              <span class="stat-label">Campus Location</span>
-              <p>Block B, 2nd Floor, Main Campus</p>
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
             </div>
-
-            <div class="stat-card">
-              <span class="stat-number">📞</span>
-              <span class="stat-label">Phone Support</span>
-              <p>+92 42 111 000 111</p>
-            </div>
-
-            <div class="stat-card">
-              <span class="stat-number">✉️</span>
-              <span class="stat-label">Email</span>
-              <p>info.cs@university.edu.pk</p>
-            </div>
-
-            <div class="stat-card">
-              <span class="stat-number">⏰</span>
-              <span class="stat-label">Office Hours</span>
-              <p>Mon – Fri<br>9AM – 5PM</p>
-            </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
 
@@ -135,9 +145,9 @@
       <div class="footer-col">
         <h3>Academic Hub</h3>
         <ul>
-          <li><a href="#">Undergraduate Programs</a></li>
-          <li><a href="#">Faculty Profiles</a></li>
-          <li><a href="#">Admission Criteria</a></li>
+          <li><a href="./courses.html">Undergraduate Programs</a></li>
+          <li><a href="./faculty.html">Faculty Profiles</a></li>
+          <li><a href="./admissions.html">Admission Criteria</a></li>
         </ul>
       </div>
 
@@ -156,4 +166,5 @@
   </footer>
 
 </body>
+
 </html>
