@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact the Department of Computer Science at University of Excellence.">
+  <title>Contact | Department of Computer Science</title>
+
+  <link rel="stylesheet" href="../styles/contact.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="home.html">
+          <span class="logo-text">UCP CS</span>
+          <span class="logo-subtext">University of Excellence</span>
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./courses.html">Courses</a></li>
+          <li><a href="./faculty.html">Faculty</a></li>
+          <li><a href="./admissions.html">Admissions</a></li>
+          <li><a href="./contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SAME HERO AS HOME -->
+    <section class="hero">
+      <img
+        src="https://ucptribune.wordpress.com/wp-content/uploads/2019/02/51736378_1879752965486067_3198642838900310016_n.png"
+        alt="University Campus" class="hero-bg">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Connect With <span style="color: var(--primary-light);">UCP CS</span></h1>
+          <p class="lead">
+            Your gateway to academic support, admissions guidance,
+            and departmental communication.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- LEFT SIDE: Contact info -->
+          <div class="contact-info">
+            <p class="mission-statement">
+              The Department of Computer Science is committed to supporting
+              students, parents, and visitors. Use the form or our direct
+              contacts to reach out.
+            </p>
+
+            <div class="about-stats" style="grid-template-columns: 1fr; gap: 1.5rem;">
+              <div class="stat-card">
+                <span class="stat-number">📍</span>
+                <span class="stat-label">Campus Location</span>
+                <p>Block B, 2nd Floor, UCP Lahore</p>
+              </div>
+
+              <div class="stat-card">
+                <span class="stat-number">📞</span>
+                <span class="stat-label">Phone Support</span>
+                <p>+92 42 111 000 111</p>
+              </div>
+
+              <div class="stat-card">
+                <span class="stat-number">✉️</span>
+                <span class="stat-label">Email</span>
+                <p>info.cs@university.edu.pk</p>
+              </div>
+
+              <div class="stat-card">
+                <span class="stat-number">⏰</span>
+                <span class="stat-label">Office Hours</span>
+                <p>Mon – Fri: 9:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: Contact Form -->
+          <div class="contact-form-container">
+            <div class="stat-card">
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h3>CS Department</h3>
+        <p>University of Excellence, Main Campus.</p>
+        <p style="margin-top: 1rem;">Lahore, Pakistan</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Academic Hub</h3>
+        <ul>
+          <li><a href="./courses.html">Undergraduate Programs</a></li>
+          <li><a href="./faculty.html">Faculty Profiles</a></li>
+          <li><a href="./admissions.html">Admission Criteria</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Get in Touch</h3>
+        <p>
+          Phone: +92 42 111 000 111<br>
+          Email: info.cs@university.edu.pk
+        </p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2026 Department of Computer Science, University of Excellence.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

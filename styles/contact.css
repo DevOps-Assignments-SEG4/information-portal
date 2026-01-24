@@ -1,0 +1,336 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --primary-light: #60a5fa;
+  --secondary: #0f172a;
+  --bg-main: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --white: #fff;
+
+  --glass: rgb(255 255 255 / 80%);
+  --glass-border: rgb(255 255 255 / 20%);
+
+  --shadow-sm: rgb(0 0 0 / 8%) 0 1px 3px;
+  --shadow-md: rgb(0 0 0 / 10%) 0 6px 12px -2px;
+  --shadow-lg: rgb(0 0 0 / 15%) 0 15px 30px -10px;
+
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   RESET & BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgb(0 0 0 / 5%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.logo-subtext {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* NAV */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  font-weight: 600;
+  position: relative;
+  transition: var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--primary);
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero {
+  position: relative;
+  padding: 7rem 0 6rem;
+  background: var(--secondary);
+  color: var(--white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg,
+      rgb(37 99 235 / 25%),
+      transparent 70%);
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.lead {
+  max-width: 650px;
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: #e5e7eb;
+}
+
+/* ==========================================================================
+   SECTION
+   ========================================================================== */
+.section {
+  padding: 6rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+}
+
+.section-divider {
+  width: 70px;
+  height: 4px;
+  background: var(--primary);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.mission-statement {
+  border-left: 4px solid var(--primary);
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* LIST */
+.highlight-list {
+  list-style: none;
+}
+
+.highlight-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+.highlight-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   CARD
+   ========================================================================== */
+.stat-card {
+  background: var(--white);
+  padding: 2.2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   FORM
+   ========================================================================== */
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 20%);
+}
+
+textarea {
+  height: 130px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   BUTTON
+   ========================================================================== */
+.btn {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg,
+      var(--primary),
+      var(--primary-dark));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgb(37 99 235 / 40%);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background: var(--secondary);
+  color: #94a3b8;
+  padding: 5rem 0 3rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.footer h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 5rem 0 4rem;
+  }
+}
