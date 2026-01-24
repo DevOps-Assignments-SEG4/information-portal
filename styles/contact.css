@@ -130,11 +130,9 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    45deg,
-    rgb(37 99 235 / 25%),
-    transparent 70%
-  );
+  background: linear-gradient(45deg,
+      rgb(37 99 235 / 25%),
+      transparent 70%);
   z-index: 1;
 }
 
@@ -267,6 +265,14 @@ textarea {
   height: 130px;
 }
 
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
 /* ==========================================================================
    BUTTON
    ========================================================================== */
@@ -281,11 +287,9 @@ textarea {
 }
 
 .btn-primary {
-  background: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--primary-dark)
-  );
+  background: linear-gradient(135deg,
+      var(--primary),
+      var(--primary-dark));
   color: white;
 }
 
