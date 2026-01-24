@@ -2,8 +2,7 @@ name: Cd file for staging
 on:
    push:
      branches:
-      - develop
-      - main
+      - release
 jobs:
   staging_job:
     runs-on: ubuntu-latest
@@ -11,4 +10,5 @@ jobs:
     steps:
      - name: Trigger web hook for staging enviornment
        run: curl -X POST ${{secrets.STAGING_RENDER_HOOK}}
+
 
